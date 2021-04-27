@@ -23,7 +23,7 @@
         "doctrine/common": "^2.4 || ^3.0",
         "doctrine/doctrine-bundle": "^1.7 || ^2.0",
         "doctrine/orm": "^2.5",
-        "serendipity_hq/component-console-styles": "dev-dev",
+        "serendipity_hq/component-console-styles": "^1.1",
         "symfony/framework-bundle": "^4.4|^5.2",
         "symfony/http-kernel": "^4.4|^5.2",
         "symfony/swiftmailer-bundle": "^3.0",
