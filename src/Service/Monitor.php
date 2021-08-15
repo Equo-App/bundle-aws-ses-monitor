@@ -430,7 +430,7 @@ final class Monitor
     {
         return
             $this->getConfiguredIdentity($identity, 'on_mx_failure') === ($this->getLiveIdentity($identity, 'mail_from')['on_mx_failure'] ?? null) &&
-            $this->getConfiguredIdentity($identity, 'from_domain') === ($this->getLiveIdentity($identity, 'mail_from')[self::DOMAIN] ?? null);
+            $this->getConfiguredIdentity($identity, 'from_domain') === ($this->getLiveIdentity($identity, 'mail_from')[IdentityGuesser::DOMAIN] ?? null);
     }
 
     /**
@@ -449,7 +449,7 @@ final class Monitor
         if ($this->identityGuesser->isEmailIdentity($identity)) {
             // This is an email identity: check its domain identity
             $parts    = $this->identityGuesser->getEmailParts($identity);
-            $identity = $parts[self::DOMAIN];
+            $identity = $parts[IdentityGuesser::DOMAIN];
         }
 
         return $this->liveIdentityIsVerified($identity);
