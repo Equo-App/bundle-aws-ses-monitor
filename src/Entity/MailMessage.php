@@ -152,11 +152,11 @@ class MailMessage
                     ->setSendingAccountId($mailMessageData['sendingAccountId']);
 
         if (isset($mailMessageData['headers'])) {
-            $mailMessage->setHeaders($mailMessageData['headers']);
+            $mailMessage->setHeaders(serialize($mailMessageData['headers']));
         }
 
         if (isset($mailMessageData['commonHeaders'])) {
-            $mailMessage->setCommonHeaders($mailMessageData['commonHeaders']);
+            $mailMessage->setCommonHeaders(serialize($mailMessageData['commonHeaders']));
         }
 
         return $mailMessage;
